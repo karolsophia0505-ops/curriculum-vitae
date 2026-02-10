@@ -1,111 +1,55 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Currículum Vitae de Karol Sophia Diaz Urias - Diseñadora Gráfica">
-    <meta name="theme-color" content="#667eea">
-    <title>Currículum Vitae - Karol Sophia Diaz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Coffee Shop</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .menu { display: flex; flex-direction: column; gap: 20px; }
+        .product { border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+        .cart { margin-top: 20px; }
+        .payment-form { margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Karol Sophia Diaz Urias</h1>
-            <p class="perfil">Estudiante de Diseño Gráfico</p>
-            <p class="subtitle">Creativa | Apasionada por el diseño digital</p>
-            <div class="contact">
-                <a href="mailto:karol@example.com" class="contact-btn">📧 Email</a>
-                <a href="tel:+000-000-0000" class="contact-btn">📱 Llamar</a>
-            </div>
-        </header>
-
-        <nav class="mobile-menu">
-            <button class="menu-toggle" id="menuToggle">☰ Menú</button>
-            <ul class="menu" id="menu">
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#certificaciones">Certificaciones</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            <section id="educacion" class="section">
-                <h2>📚 Educación</h2>
-                <div class="content-item">
-                    <h3>Licenciatura en Diseño Gráfico</h3>
-                    <p class="institution">Universidad XYZ</p>
-                    <p class="date">2022 - Actualidad</p>
-                </div>
-            </section>
-
-            <section id="experiencia" class="section">
-                <h2>💼 Experiencia</h2>
-                <div class="content-item">
-                    <h3>Diseñadora Freelance</h3>
-                    <p class="description">Creación de logotipos, branding y contenido visual para redes sociales.</p>
-                </div>
-            </section>
-
-            <section id="habilidades" class="section">
-                <h2>🛠️ Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Diseño</h3>
-                        <ul>
-                            <li>Figma</li>
-                            <li>Adobe Illustrator</li>
-                            <li>Adobe Photoshop</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Competencias</h3>
-                        <ul>
-                            <li>Creatividad visual</li>
-                            <li>Diseño UI/UX</li>
-                            <li>Branding</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio" class="section">
-                <h2>🎨 Portfolio</h2>
-                <p class="empty-state">Proyectos destacados en construcción. Próximamente disponibles enlaces a tus mejores trabajos.</p>
-            </section>
-
-            <section id="certificaciones" class="section">
-                <h2>🏆 Certificaciones</h2>
-                <p class="empty-state">Agrega aquí tus certificaciones y cursos completados.</p>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Karol Sophia Diaz Urias</p>
-            <p class="footer-contact">karol@example.com | 000-000-0000</p>
-        </footer>
+    <h1>Welcome to Our Coffee Shop ☕</h1>
+    <h2>Menu</h2>
+    <div class="menu">
+        <div class="product">Espresso - $3.00 ☕</div>
+        <div class="product">Latte - $4.00 ☕</div>
+        <div class="product">Cappuccino - $4.50 ☕</div>
+        <div class="product">Americano - $2.50 ☕</div>
+        <div class="product">Mocha - $4.00 ☕</div>
+        <div class="product">Cold Brew - $3.50 ☕</div>
+        <div class="product">Flat White - $4.00 ☕</div>
+        <div class="product">Macchiato - $3.50 ☕</div>
+        <div class="product">Croissant - $2.50 🥐</div>
+        <div class="product">Danish - $3.00 🥐</div>
+        <div class="product">Muffin - $2.00 🧁</div>
+        <div class="product">Brownie - $2.50 🍰</div>
+        <div class="product">Cheesecake - $3.00 🍰</div>
+        <div class="product">Cupcake - $2.00 🧁</div>
+    </div>
+    
+    <div class="cart">
+        <h2>Your Shopping Cart 🛒</h2>
+        <p>No items in the cart.</p>
     </div>
 
-    <script>
-        // Toggle menú móvil
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('menu');
-
-        menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        const menuLinks = menu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                menu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-    </script>
+    <div class="payment-form">
+        <h2>Payment Form</h2>
+        <form>
+            <label for="name">Name on Card:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required><br><br>
+            <label for="expiry">Expiry Date (MM/YY):</label>
+            <input type="text" id="expiry" name="expiry" required><br><br>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br><br>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
 </body>
 </html>
